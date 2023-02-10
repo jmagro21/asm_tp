@@ -2,16 +2,16 @@ section .data
     string db '1337', 0
     string_len equ $-string
 section .bss
-    input resb 4 ; allouer 4 octets pour stocker l'entree utilisateur
+    input resb 4
 
 global _start
 
 section .text
 _start:
 
-    pop ecx             ; argc in ecx
-    add esp, 4          ; on bouge le pointeur de la stack à esp + 4 pour récupere l'adresse de arg1
-    mov ecx, [esp]      ; On recupere la valeur de arg1 dans ecx
+    pop ecx             
+    add esp, 4          
+    mov ecx, [esp]      
     
     cmp byte[ecx], 0x34 
     jne exit
