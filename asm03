@@ -22,15 +22,15 @@ _start:
     mov ebx, 1
     mov ecx, string
     mov edx, string_len
-    int 80h
+    int 0x80
     
     mov eax, 1
     mov ebx, 0
-    int 80h
+    int 0x80
     
    
 exit:
     
     mov eax, 1
     mov ebx, 1
-    int 80h
+    int 0x80
